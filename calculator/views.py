@@ -6,5 +6,12 @@ def home(request):
     if request.method == 'POST':
         X = int(request.POST.get('X'))
         Y = int(request.POST.get('Y'))
-        result = X + Y
+        if(request.POST.get('operator') == 'add'):
+            result = X + Y
+        elif(request.POST.get('operator') == 'subtrack'):
+            result = X - Y
+        elif(request.POST.get('operator') == 'multiply'):
+            result = X * Y
+        elif(request.POST.get('operator') == 'divide'):
+            result = X / Y
     return render(request, 'home.html', {'result': result})
