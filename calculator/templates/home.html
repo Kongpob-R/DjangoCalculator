@@ -3,16 +3,33 @@
 
 <form action="" method="post">
     {% csrf_token %}
-    <p><input type="text" name="X" id="X"></p>
-    <p><input type="text" name="Y" id="Y"></p>
-    <p>
-        <ul>
-            <li><input type="radio" name="operator" value="add">add</li>
-            <li><input type="radio" name="operator" value="subtrack">subtrack</li>
-            <li><input type="radio" name="operator" value="multiply">multiply</li>
-            <li><input type="radio" name="operator" value="divide">divide</li>
-        </ul>
-    </p>
-    <p><button type="submit">Enter!</button></p>
+    <div class="row">
+        <div class="col-md-6">
+            <p>
+                <label for="X">input X:</label>
+                <input type="text" name="X" id="X">
+            </p>
+
+            <p>
+                <label for="Y">input Y:</label>
+                <input type="text" name="Y" id="Y">
+            </p>
+        </div>
+        <div class="col-md-6">
+            <p>
+                <ul>
+                    <li><input type="radio" name="operator" value="add">add</li>
+                    <li><input type="radio" name="operator" value="subtrack">subtrack</li>
+                    <li><input type="radio" name="operator" value="multiply">multiply</li>
+                    <li><input type="radio" name="operator" value="divide">divide</li>
+                </ul>
+            </p>
+            <p><button type="submit">Enter!</button></p>
+        </div>
+    </div>
+
 </form>
-<p>{{ result }}</p>
+<p>
+    <label for="result">Result: </label>
+    {{ result }}
+</p>
