@@ -1,1 +1,10 @@
 <h1>This is homepage</h1>
+<h2>For calculator application</h2>
+
+<form action="" method="post">
+    {% csrf_token %}
+    <p><input type="text" name="X" id="X"></p>
+    <p><input type="text" name="Y" id="Y"></p>
+    <p><button type="submit">Enter!</button></p>
+</form>
+<p>{{ result }}</p>
