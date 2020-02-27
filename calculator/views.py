@@ -14,4 +14,4 @@ def home(request):
             result = X * Y
         elif(request.POST.get('operator') == 'divide'):
             result = X / Y
-    return render(request, 'home.html', {'result': result})
+    return render(request, 'homePOST.html', {'result': result})

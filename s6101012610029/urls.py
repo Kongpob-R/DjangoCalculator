@@ -20,7 +20,10 @@ from calculatorGET import views as calculatorGET
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', calculatorGET.index),
+    path('aboutme/', calculatorGET.aboutme),
     path('post', calculator.home),
     path('get/', calculatorGET.home),
     path('get/<str:equation>/', calculatorGET.home),
+
 ]
