@@ -16,8 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from calculator import views as calculator
+from calculatorGET import views as calculatorGET
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', calculator.home),
+    path('post', calculator.home),
+    # path('get/<str:equation>/', views.home),
 ]
